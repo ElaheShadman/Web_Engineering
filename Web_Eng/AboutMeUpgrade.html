@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me</title>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#movies">Favorite Movies</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Elahe Shadman</h1>
+        <p>Welcome to my personal webpage! I'm learning web development and exploring how to build clean, semantic HTML pages.</p>
+        <img src="C:\Users\Elahe\Desktop\DHBW\First Semester\web eng\Web_Eng\MyProfile.jpg" alt="My photo" width="200">
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I enjoy programming, learning new technologies, and building creative projects.  
+            This webpage is part of my Web Engineering course, where I practice writing semantic HTML.
+        </p>
+
+        <h3>My Interests</h3>
+        <ul>
+            <li>Coding and problem solving</li>
+            <li>Designing simple web pages</li>
+            <li>Watching movies and reading</li>
+        </ul>
+    </section>
+
+    <!-- Table Section -->
+    <section id="movies">
+        <h2>My Favorite Movies</h2>
+
+        <table border="1" cellpadding="8">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Director</th>
+                    <th>Year</th>
+                    <th>IMDb</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Inception</td>
+                    <td>Christopher Nolan</td>
+                    <td rowspan="2">2010</td>
+                    <td><a href="https://www.imdb.com/title/tt1375666/" target="_blank">Link</a></td>
+                </tr>
+
+                <tr>
+                    <td>Shutter Island</td>
+                    <td>Martin Scorsese</td>
+                    <td><a href="https://www.imdb.com/title/tt1130884/" target="_blank">Link</a></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><strong>The Matrix</strong></td>
+                    <td>1999</td>
+                    <td><a href="https://www.imdb.com/title/tt0133093/" target="_blank">Link</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <form>
+            <label for="name">Your Name:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="email">Your Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5"></textarea><br><br>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+</body>
+</html>
