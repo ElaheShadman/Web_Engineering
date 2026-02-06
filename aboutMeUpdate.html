@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Me - Contact Form</title>
+</head>
+<body>
+
+    <h2>Contact Me</h2>
+
+    <form action="submit_form.php" method="post">
+
+        <label for="fullname">Full Name:</label><br>
+        <input type="text" id="fullname" name="fullname" required><br><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone"><br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label><br>
+
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br>
+
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label><br><br>
+
+        <label for="color">Favorite Color:</label><br>
+        <input type="color" id="color" name="favorite_color"><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="40"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+</html>
