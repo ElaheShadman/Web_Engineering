@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Elahe Shadman</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header, section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header { text-align: center; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        thead { background-color: #007BFF; color: white; }
+
+        @media screen and (min-width: 768px) {
+            .grid-container { grid-template-columns: 1fr 1fr; }
+            header, #contact { grid-column: 1 / span 2; }
+        }
+
+        .top-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #007BFF;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        .top-button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#movies">Favorite Movies</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <div class="grid-container">
+        <header id="top">
+            <h1>Elahe Shadman</h1>
+            <p>Welcome to my personal webpage! I'm learning web development.</p>
+            <img src="https://i.pinimg.com/236x/a0/dc/62/a0dc62bfb9265f63ed4034a325f0b3e5.jpg" alt="My photo" width="100">
+        </header>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I enjoy programming, learning new technologies, and building creative projects.</p>
+            <h3>My Interests</h3>
+            <ul>
+                <li>Coding and problem solving</li>
+                <li>Designing simple web pages</li>
+                <li>Watching movies and reading</li>
+            </ul>
+        </section>
+
+        <section id="movies">
+            <h2>My Favorite Movies</h2>
+            <table>
+                <thead>
+                    <tr><th>Title</th><th>Director</th><th>Year</th><th>IMDb</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Inception</td><td>Christopher Nolan</td><td>2010</td><td><a href="https://www.imdb.com/title/tt1375666/" target="_blank">Link</a></td></tr>
+                    <tr><td>Shutter Island</td><td>Martin Scorsese</td><td>2010</td><td><a href="https://www.imdb.com/title/tt1130884/" target="_blank">Link</a></td></tr>
+                    <tr><td>The Matrix</td><td>Wachowskis</td><td>1999</td><td><a href="https://www.imdb.com/title/tt0133093/" target="_blank">Link</a></td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <label>Your Name:</label><br>
+                <input type="text" style="width:100%; padding:8px; margin-top:5px;"><br><br>
+                
+                <label>Your Email:</label><br>
+                <input type="email" style="width:100%; padding:8px; margin-top:5px;"><br><br>
+                
+                <label>Message:</label><br>
+                <textarea style="width:100%; padding:8px; margin-top:5px;" rows="4"></textarea><br><br>
+                
+                <button type="submit" style="padding:10px 20px; background:#007BFF; color:white; border:none; cursor:pointer;">Send</button>
+            </form>
+        </section>
+    </div>
+
+    <a href="#top" class="top-button">↑</a>
+
+</body>
+</html>
