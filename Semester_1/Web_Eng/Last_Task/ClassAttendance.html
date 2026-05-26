@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Attendance</title>
+  <script src="ClassA.js" defer></script>
+
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Courier New', monospace;
+      background: #faf7f2;
+    }
+
+    h1 {
+      margin: 20px auto;
+      font-size: 2.5rem;
+      color: chocolate;
+      border: 1px solid chocolate;
+      border-radius: 15px;
+      background-color: beige;
+      max-width: 350px;
+      text-align: center;
+      padding: 20px 10px;
+      font-family: cursive;
+    }
+
+    .container {
+      border: 2px solid chocolate;
+      margin: 40px;
+      padding: 20px;
+      border-radius: 10px;
+      background: #fff;
+    }
+
+    .container label {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .container input {
+      background-color: antiquewhite;
+      border-radius: 10px;
+      padding: 8px;
+      margin-left: 10px;
+    }
+
+    .container button {
+      font-size: 1.2rem;
+      margin-left: 20px;
+      color: cadetblue;
+      background-color: rgba(9, 91, 243, 0.1);
+      border-radius: 8px;
+      padding: 5px 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .container button:hover {
+      background-color: rgba(9, 91, 243, 0.2);
+      transform: scale(1.05);
+    }
+
+    .counter {
+      margin-left: 40px;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    ul {
+      margin: 40px;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 12px;
+      padding: 10px;
+      background: #fff;
+      border-radius: 8px;
+      border-left: 5px solid chocolate;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeIn 0.4s forwards;
+    }
+
+    li button {
+      font-size: 1rem;
+      color: #444;
+      background: #eee;
+      border-radius: 6px;
+      padding: 4px 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    li button:hover {
+      background: #ddd;
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Students List</h1>
+
+  <div class="container">
+    <label for="student">Enter your Name:</label>
+    <input type="text" id="student">
+    <button class="addStudent">Add Student</button>
+  </div>
+
+  <div class="counter">
+    Student Count: <span>0</span>
+  </div>
+
+  <ul></ul>
+
+</body>
+</html>
