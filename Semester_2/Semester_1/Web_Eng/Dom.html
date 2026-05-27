@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Access Demo</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="main-title">The Document Object Model</h1>
+
+  <p class="info">Paragraph with class "info" (1)</p>
+  <p class="info">Paragraph with class "info" (2)</p>
+
+  <ul>
+    <li>First list item</li>
+    <li>Second list item</li>
+    <li>Third list item</li>
+  </ul>
+
+  <div class="box special">Box with class "box special"</div>
+  <div class="box">Box with class "box"</div>
+
+  <button id="btn-id">Use getElementById</button>
+  <button id="btn-class">Use getElementsByClassName</button>
+  <button id="btn-tag">Use getElementsByTagName</button>
+  <button id="btn-query">Use querySelector</button>
+  <button id="btn-query-all">Use querySelectorAll</button>
+
+  <script>
+    // 1. getElementById
+    document.getElementById('btn-id').addEventListener('click', function () {
+      const title = document.getElementById('main-title');
+      title.textContent = 'Title changed with getElementById';
+    });
+
+    // 2. getElementsByClassName
+    document.getElementById('btn-class').addEventListener('click', function () {
+      const infos = document.getElementsByClassName('info');
+      for (let i = 0; i < infos.length; i++) {
+        infos[i].classList.toggle('highlight');
+      }
+    });
+
+    // 3. getElementsByTagName
+    document.getElementById('btn-tag').addEventListener('click', function () {
+      const listItems = document.getElementsByTagName('li');
+      for (let i = 0; i < listItems.length; i++) {
+        listItems[i].textContent = 'Changed with getElementsByTagName';
+      }
+    });
+
+    // 4. querySelector
+    document.getElementById('btn-query').addEventListener('click', function () {
+      const firstBox = document.querySelector('.box');
+      firstBox.textContent = 'First .box changed with querySelector';
+    });
+
+    // 5. querySelectorAll
+    document.getElementById('btn-query-all').addEventListener('click', function () {
+      const allBoxes = document.querySelectorAll('.box');
+      allBoxes.forEach((box, index) => {
+        box.textContent = 'Box ' + (index + 1) + ' changed with querySelectorAll';
+      });
+    });
+  </script>
+</body>
+</html>
